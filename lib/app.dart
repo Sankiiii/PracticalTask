@@ -1,25 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:practical_task/providers/home_provider.dart';
-import 'package:practical_task/providers/profile_provider.dart';
-import 'package:practical_task/providers/reels_provider.dart';
-import 'package:practical_task/providers/upload_provider.dart';
 import 'package:practical_task/screens/main_screen.dart';
-import 'package:provider/provider.dart';
 
-void main() {
-  runApp(
-    MultiProvider(
-      providers: [
-        ChangeNotifierProvider(create: (_) => HomeProvider()),
-        ChangeNotifierProvider(create: (_) => UploadProvider()),
-        ChangeNotifierProvider(create: (_) => ReelsProvider()),
-        ChangeNotifierProvider(create: (_) => ProfileProvider()),
 
-      ],
-      child: const MyApp(),
-    ),
-  );
-}
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
